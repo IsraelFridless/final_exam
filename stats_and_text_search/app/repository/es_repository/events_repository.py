@@ -1,6 +1,6 @@
 from app.settings.es_config import elastic_client as es
 
-def search_keyword_in_events(word: str, summary_boost: float = 2.0, custom_query_boost: float = 1.5):
+def search_keyword_in_events(word: str, limit: int, summary_boost: float = 2.0, custom_query_boost: float = 1.5):
     query = {
         "query": {
             "bool": {
@@ -21,13 +21,14 @@ def search_keyword_in_events(word: str, summary_boost: float = 2.0, custom_query
                     }
                 ]
             }
-        }
+        },
+        "size": limit
     }
     response = es.search(index="events", body=query)
     hits = response['hits']['hits']
     return hits
 
-def search_keyword_in_events_date_range(word: str, start_year: int, start_month: int,
+def search_keyword_in_events_date_range(word: str, limit: int, start_year: int, start_month: int,
                                         end_year: int, end_month: int,
                                         summary_boost: float = 2.0):
     query = {
@@ -60,7 +61,8 @@ def search_keyword_in_events_date_range(word: str, start_year: int, start_month:
                     }
                 ]
             }
-        }
+        },
+        "size": limit
     }
     response = es.search(index="events", body=query)
     hits = response['hits']['hits']

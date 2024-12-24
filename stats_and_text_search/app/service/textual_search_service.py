@@ -21,9 +21,9 @@ def format_search_results(results: List[Dict], result_type: str) -> List[Dict]:
     return formatted_results
 
 
-def search_keyword_in_all_data_sources(keyword: str) -> List[Dict]:
-    events_result = search_keyword_in_events(keyword)
-    article_results = search_keyword_in_articles(keyword)
+def search_keyword_in_all_data_sources(keyword: str, limit: int) -> List[Dict]:
+    events_result = search_keyword_in_events(keyword, limit)
+    article_results = search_keyword_in_articles(keyword, limit)
 
     formatted_events = format_search_results(events_result, "event")
     formatted_articles = format_search_results(article_results, "article")
@@ -31,19 +31,19 @@ def search_keyword_in_all_data_sources(keyword: str) -> List[Dict]:
     return formatted_events + formatted_articles
 
 
-def search_keyword_in_news_articles(keyword: str) -> List[Dict]:
-    article_results = search_keyword_in_articles(keyword)
+def search_keyword_in_news_articles(keyword: str, limit: int) -> List[Dict]:
+    article_results = search_keyword_in_articles(keyword, limit)
     return format_search_results(article_results, "article")
 
 
-def search_keyword_in_historic_events(keyword: str) -> List[Dict]:
-    events_result = search_keyword_in_events(keyword)
+def search_keyword_in_historic_events(keyword: str, limit: int) -> List[Dict]:
+    events_result = search_keyword_in_events(keyword, limit)
     return format_search_results(events_result, "event")
 
 
-def search_results_by_date_range_all_sources(keyword: str, start_year, start_month, end_year, end_month) -> List[Dict]:
-    events_result = search_keyword_in_events_date_range(keyword, start_year, start_month, end_year, end_month)
-    article_results = search_keyword_in_articles_date_range(keyword, start_year, start_month, end_year, end_month)
+def search_results_by_date_range_all_sources(keyword: str, limit: int, start_year, start_month, end_year, end_month) -> List[Dict]:
+    events_result = search_keyword_in_events_date_range(keyword, limit, start_year, start_month, end_year, end_month)
+    article_results = search_keyword_in_articles_date_range(keyword, limit, start_year, start_month, end_year, end_month)
 
     formatted_events = format_search_results(events_result, "event")
     formatted_articles = format_search_results(article_results, "article")

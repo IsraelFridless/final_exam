@@ -1,6 +1,6 @@
 from app.settings.es_config import elastic_client as es
 
-def search_keyword_in_articles(word: str, title_boost: float = 2.0, body_boost: float = 1.0, custom_query_boost: float = 1.5):
+def search_keyword_in_articles(word: str, limit: int, title_boost: float = 2.0, body_boost: float = 1.0, custom_query_boost: float = 1.5):
     query = {
         "query": {
             "bool": {
@@ -21,7 +21,8 @@ def search_keyword_in_articles(word: str, title_boost: float = 2.0, body_boost: 
                     }
                 ]
             }
-        }
+        },
+        "size": limit
     }
     response = es.search(index="articles", body=query)
     hits = response['hits']['hits']
@@ -45,7 +46,7 @@ def build_date_range_filter(start_year: int, start_month: int, end_year: int, en
 
     return date_range_filter
 
-def search_keyword_in_articles_date_range(word: str, start_year: int, start_month: int, end_year: int, end_month: int, title_boost: float = 2.0, body_boost: float = 1.0, custom_query_boost: float = 1.5):
+def search_keyword_in_articles_date_range(word: str, limit: int, start_year: int, start_month: int, end_year: int, end_month: int, title_boost: float = 2.0, body_boost: float = 1.0, custom_query_boost: float = 1.5):
     date_range_filter = build_date_range_filter(start_year, start_month, end_year, end_month)
     query = {
         "query": {
@@ -74,7 +75,8 @@ def search_keyword_in_articles_date_range(word: str, start_year: int, start_mont
                     }
                 ]
             }
-        }
+        },
+        "size": limit
     }
     response = es.search(index="articles", body=query)
     hits = response['hits']['hits']
