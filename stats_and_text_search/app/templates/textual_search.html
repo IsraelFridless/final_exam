@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terror Events Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .filters-container {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .map-container, .results-container {
+            height: 600px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .container {
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h2>Terror Events Dashboard</h2>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="statistics-tab" data-bs-toggle="tab" data-bs-target="#statistics" type="button" role="tab">Statistics</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="text-search-tab" data-bs-toggle="tab" data-bs-target="#text-search" type="button" role="tab">Textual Search</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="dashboardContent">
+            <!-- Statistics Tab -->
+            <div class="tab-pane fade show active" id="statistics" role="tabpanel">
+                <div class="filters-container">
+                    <form id="statisticsForm" class="row g-3">
+                        <!-- Statistics Filters -->
+                        <div class="col-md-6">
+                            <label class="form-label">Search Query</label>
+                            <select class="form-select" id="query" name="query">
+                                <option value="groups_by_location_and_mutual_targets">Groups by Location and Mutual Targets</option>
+                                <option value="groups_by_attack_type_and_location">Groups by Attack Type and Location</option>
+                                <option value="get_coactive_groups_by_location">Coactive Groups by Location</option>
+                                <option value="most_active_groups_per_location">Most active Groups per location</option>
+                                <option value="coordinates_by_date_range">Geographical Terrorism HeatMap</option>
+                                <option value="avg_casualty_score_per_region">Avg casualty score per region</option>
+                                <option value="deadliest_attack_type">Deadliest Attack Type</option>
+                                <option value="groups_with_highest_casualty_score">Groups with the highest casualty score</option>
+                                <option value="group_migration_patterns">Group migration patterns</option>
+                            </select>
+                        </div>
+                        <!-- Location Type -->
+                        <div class="col-md-3">
+                            <label class="form-label">Location Type</label>
+                            <select class="form-select" id="locationType" name="locationType">
+                                <option value="region">Region</option>
+                                <option value="country">Country</option>
+                                <option value="city">City</option>
+                            </select>
+                        </div>
+                        <!-- Results Limit -->
+                        <div class="col-md-3">
+                            <label class="form-label">Results Limit</label>
+                            <input type="number" class="form-control" id="limit" name="limit">
+                        </div>
+                        <!-- Start Year -->
+                        <div class="col-md-3">
+                            <label class="form-label">Start Year</label>
+                            <input type="number" class="form-control" id="startYear" name="startYear">
+                        </div>
+                        <!-- End Year -->
+                        <div class="col-md-3">
+                            <label class="form-label">End Year</label>
+                            <input type="number" class="form-control" id="endYear" name="endYear">
+                        </div>
+                        <!-- Start Month -->
+                        <div class="col-md-3">
+                            <label class="form-label">Start Month</label>
+                            <input type="number" class="form-control" id="startMonth" name="startMonth" min="1" max="12">
+                        </div>
+                        <!-- End Month -->
+                        <div class="col-md-3">
+                            <label class="form-label">End Month</label>
+                            <input type="number" class="form-control" id="endMonth" name="endMonth" min="1" max="12">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" onclick="initStatisticsMap()" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="map-container" id="statisticsMapContainer"></div>
+            </div>
+
+            <!-- Textual Search Tab -->
+            <div class="tab-pane fade" id="text-search" role="tabpanel">
+                <div class="filters-container">
+                    <form id="textSearchForm" class="row g-3">
+                        <!-- Textual Search Filters -->
+                        <div class="col-md-6">
+                            <label class="form-label">Search Keyword</label>
+                            <input type="text" class="form-control" id="keyword" name="keyword" placeholder="Enter a keyword">
+                        </div>
+                        <!-- Search Type -->
+                        <div class="col-md-3">
+                            <label class="form-label">Search Type</label>
+                            <select class="form-select" id="searchType" name="searchType">
+                                <option value="keywords">Keywords</option>
+                                <option value="news">News</option>
+                                <option value="historic">Historic</option>
+                                <option value="combined">Combined</option>
+                            </select>
+                        </div>
+                        <!-- Start Year -->
+                        <div class="col-md-3">
+                            <label class="form-label">Start Year</label>
+                            <input type="number" class="form-control" id="startYearText" name="startYearText">
+                        </div>
+                        <!-- End Year -->
+                        <div class="col-md-3">
+                            <label class="form-label">End Year</label>
+                            <input type="number" class="form-control" id="endYearText" name="endYearText">
+                        </div>
+                        <!-- Start Month -->
+                        <div class="col-md-3">
+                            <label class="form-label">Start Month</label>
+                            <input type="number" class="form-control" id="startMonthText" name="startMonthText" min="1" max="12">
+                        </div>
+                        <!-- End Month -->
+                        <div class="col-md-3">
+                            <label class="form-label">End Month</label>
+                            <input type="number" class="form-control" id="endMonthText" name="endMonthText" min="1" max="12">
+                        </div>
+                        <!-- Results Limit -->
+                        <div class="col-md-3">
+                            <label class="form-label">Results Limit</label>
+                            <input type="number" class="form-control" id="limitText" name="limitText">
+                        </div>
+                        <div class="col-12">
+                            <button type="button" onclick="initTextualSearch()" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="map-container" id="textSearchMapContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const fetchData = async (url) => {
+            const response = await fetch(url);
+            return await response.json();
+        };
+
+        // Initialize Statistics Map
+        const initStatisticsMap = async () => {
+            const query = document.getElementById('query').value;
+            const locationType = document.getElementById('locationType').value || 'region';
+            const limit = document.getElementById('limit').value || 5;
+            const startYear = document.getElementById('startYear').value;
+            const endYear = document.getElementById('endYear').value;
+            const startMonth = document.getElementById('startMonth').value;
+            const endMonth = document.getElementById('endMonth').value;
+
+            const baseUrl = `http://localhost:5000/api/statistics/${query}`;
+            const queryString = new URLSearchParams({
+                locationType,
+                limit,
+                startYear,
+                endYear,
+                startMonth,
+                endMonth
+            }).toString();
+            const url = `${baseUrl}?${queryString}`;
+
+            const { map_html } = await fetchData(url);
+            const mapContainer = document.getElementById('statisticsMapContainer');
+            mapContainer.innerHTML = map_html.startsWith("data:image/png;base64")
+                ? `<img src="${map_html}" style="width:100%; height:auto;" />`
+                : map_html;
+        };
+
+        // Initialize Textual Search Map
+        const initTextualSearch = async () => {
+            const keyword = document.getElementById('keyword').value;
+            const searchType = document.getElementById('searchType').value;
+            const limit = document.getElementById('limitText').value || 5;
+            const startYear = document.getElementById('startYearText').value;
+            const endYear = document.getElementById('endYearText').value;
+            const startMonth = document.getElementById('startMonthText').value;
+            const endMonth = document.getElementById('endMonthText').value;
+
+            const url = `http://localhost:5000/api/search/${searchType}?keyword=${encodeURIComponent(keyword)}&limit=${limit}&startYear=${startYear}&endYear=${endYear}&startMonth=${startMonth}&endMonth=${endMonth}`;
+            const { map_html } = await fetchData(url);
+            const mapContainer = document.getElementById('textSearchMapContainer');
+            mapContainer.innerHTML = map_html.startsWith("data:image/png;base64")
+                ? `<img src="${map_html}" style="width:100%; height:auto;" />`
+                : map_html;
+        };
+    </script>
+</body>
+</html>

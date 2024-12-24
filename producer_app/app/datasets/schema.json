@@ -1,0 +1,18 @@
+{
+  "_id": "ObjectId",
+  "date": "ISODate",
+  "location": {
+    "region": "String",
+    "country": "String",
+    "city": "String",
+    "latitude": "Number",
+    "longitude": "Number"
+  },
+  "groups_involved": ["String"],
+  "attack_types": ["String"],
+  "target_types": ["String"],
+  "casualties": {
+    "fatalities": "Number",
+    "injuries": "Number"
+  }
+}

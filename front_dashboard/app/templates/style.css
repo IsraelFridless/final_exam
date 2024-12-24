@@ -1,0 +1,17 @@
+.filters-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.map-container, .results-container {
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding-bottom: 40px;
+}

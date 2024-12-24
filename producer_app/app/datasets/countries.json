@@ -1,0 +1,25 @@
+{
+  "countries": [
+    { "country": "Afghanistan", "latitude": 33.9391, "longitude": 67.7100 },
+    { "country": "Albania", "latitude": 41.1533, "longitude": 20.1683 },
+    { "country": "Algeria", "latitude": 28.0339, "longitude": 1.6596 },
+    { "country": "Andorra", "latitude": 42.5063, "longitude": 1.5211 },
+    { "country": "Angola", "latitude": -11.2027, "longitude": 17.8739 },
+    { "country": "Antigua and Barbuda", "latitude": 17.0608, "longitude": -61.7964 },
+    { "country": "Argentina", "latitude": -38.4161, "longitude": -63.6167 },
+    { "country": "Armenia", "latitude": 40.0691, "longitude": 45.0382 },
+    { "country": "Australia", "latitude": -25.2744, "longitude": 133.7751 },
+    { "country": "Austria", "latitude": 47.5162, "longitude": 14.5501 },
+    { "country": "Azerbaijan", "latitude": 40.1431, "longitude": 47.5769 },
+    { "country": "Bahamas", "latitude": 25.0343, "longitude": -77.3963 },
+    { "country": "Bahrain", "latitude": 26.0667, "longitude": 50.5577 },
+    { "country": "Bangladesh", "latitude": 23.6850, "longitude": 90.3563 },
+    { "country": "Barbados", "latitude": 13.1939, "longitude": -59.5432 },
+    { "country": "Belarus", "latitude": 53.7098, "longitude": 27.9534 },
+    { "country": "Belgium", "latitude": 50.8503, "longitude": 4.3517 },
+    { "country": "Belize", "latitude": 17.1899, "longitude": -88.4976 },
+    { "country": "Benin", "latitude": 9.3077, "longitude": 2.3158 },
+    { "country": "Bhutan", "latitude": 27.5142, "longitude": 90.4336 }
+  ]
+}
+

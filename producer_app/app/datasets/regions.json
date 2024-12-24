@@ -1,0 +1,64 @@
+{
+  "regions": [
+    {
+      "region": "Australasia & Oceania",
+      "latitude": -25.2744,
+      "longitude": 133.7751
+    },
+    {
+      "region": "Central America & Caribbean",
+      "latitude": 15.7835,
+      "longitude": -85.6035
+    },
+    {
+      "region": "Central Asia",
+      "latitude": 41.767,
+      "longitude": 70.903
+    },
+    {
+      "region": "East Asia",
+      "latitude": 35.8617,
+      "longitude": 104.1954
+    },
+    {
+      "region": "Eastern Europe",
+      "latitude": 55.7558,
+      "longitude": 37.6173
+    },
+    {
+      "region": "Middle East & North Africa",
+      "latitude": 26.8206,
+      "longitude": 30.8025
+    },
+    {
+      "region": "North America",
+      "latitude": 37.0902,
+      "longitude": -95.7129
+    },
+    {
+      "region": "South America",
+      "latitude": -14.235,
+      "longitude": -51.9253
+    },
+    {
+      "region": "South Asia",
+      "latitude": 20.5937,
+      "longitude": 78.9629
+    },
+    {
+      "region": "Southeast Asia",
+      "latitude": 5.354,
+      "longitude": 115.074
+    },
+    {
+      "region": "Sub-Saharan Africa",
+      "latitude": -1.9403,
+      "longitude": 29.8739
+    },
+    {
+      "region": "Western Europe",
+      "latitude": 48.8566,
+      "longitude": 2.3522
+    }
+  ]
+}
