@@ -8,9 +8,6 @@ from app.routes.textual_serach_route import text_search_blueprint
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 if __name__ == '__main__':
     app.register_blueprint(gtd_statistics_blueprint, url_prefix='/api/statistics')
