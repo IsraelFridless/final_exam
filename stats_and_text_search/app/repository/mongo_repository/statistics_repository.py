@@ -66,7 +66,7 @@ def get_coactive_groups_by_location(location_type: str = 'region') -> List[Dict]
     return result
 
 # Question No. 17
-def get_group_migration_patterns() -> List[Dict]:
-    pipeline = group_migration_patterns_pipeline()
+def get_events_by_group_name(group_name: str) -> List[Dict]:
+    pipeline = events_by_group_name_pipeline(group_name)
     result = list(events_collection.aggregate(pipeline))
     return result

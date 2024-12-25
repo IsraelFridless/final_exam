@@ -1,10 +1,9 @@
 import io
-
-import folium
-import pandas as pd
+import toolz as t
 from folium.plugins import HeatMap
 from app.repository.mongo_repository.statistics_repository import *
 from app.repository.mongo_repository.location_repository import *
+from app.service.migraion_pattern_service import *
 import matplotlib.pyplot as plt
 
 
@@ -252,40 +251,14 @@ def plot_casualties_by_group(results: List[Dict]):
     plt.close()
     return buffer
 
-def plot_migration_patterns(results: List[Dict]) -> folium.Map:
-    data = []
-    for event in results:
-        data.append({
-            'region': event['region'],
-            'country': event['country'],
-            'city': event['city'],
-            'group': event['group'],
-            'year': event['year'],
-            'month': event['month'],
-            'total_events': event['total_events'],
-            'latitude': event.get('latitude'),
-            'longitude': event.get('longitude')
-        })
-
-    df = pd.DataFrame(data)
-
-    df = df.dropna(subset=['latitude', 'longitude'])
-
-    map_center = [df['latitude'].mean(), df['longitude'].mean()]
-    m = folium.Map(location=map_center, zoom_start=5)
-
-    for _, row in df.iterrows():
-        folium.CircleMarker(
-            location=[row['latitude'], row['longitude']],
-            radius=row['total_events'] / 2,
-            color='blue',
-            fill=True,
-            fill_color='blue',
-            fill_opacity=0.6,
-            popup=f"Group: {row['group']}<br>Events: {row['total_events']}<br>Year: {row['year']}<br>Month: {row['month']}"
-        ).add_to(m)
-
-    return m
+def generate_group_migrations_map(group_name: str) -> folium.Map:
+    return t.pipe(
+        group_name,
+        get_events_by_group_name,
+        analyze_group_movement_patterns,
+        lambda x: add_coords(x['location_frequency']),
+        create_events_map
+    )
 
 def generate_map_for_textual_search_results(results: List[Dict]) -> folium.Map:
     m = folium.Map(location=[20, 0], zoom_start=2)

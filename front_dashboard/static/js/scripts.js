@@ -8,6 +8,7 @@ const initStatisticsMap = async () => {
     const query = document.getElementById('query').value;
     const locationType = document.getElementById('locationType').value || 'region';
     const limit = document.getElementById('limit').value || 5;
+    const groupName = document.getElementById('groupName').value;
     const startYear = document.getElementById('startYear').value;
     const endYear = document.getElementById('endYear').value;
     const startMonth = document.getElementById('startMonth').value;
@@ -17,6 +18,7 @@ const initStatisticsMap = async () => {
     const queryString = new URLSearchParams({
         locationType,
         limit,
+        groupName,
         startYear,
         endYear,
         startMonth,

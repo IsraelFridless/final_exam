@@ -1,6 +1,6 @@
 import sys
 from kafka import KafkaConsumer
-from app.db.es_config import setup_events_index, drop_index, EVENTS_INDEX
+from app.db.es_config import setup_events_index
 from app.repository.events_repository import insert_events_batch
 
 topics = ['events-topic']

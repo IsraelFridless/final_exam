@@ -105,9 +105,8 @@ def multiple_groups_involved_in_event_route():
 @gtd_statistics_blueprint.route('/group_migration_patterns', methods=['GET'])
 def group_migration_patterns_route():
     try:
-        results = get_group_migration_patterns()
-
-        map_content = plot_migration_patterns(results)
+        group_name = str(request.args.get('groupName'))
+        map_content = generate_group_migrations_map(group_name)
         return jsonify({'map_html': map_content._repr_html_()}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500

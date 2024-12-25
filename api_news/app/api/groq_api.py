@@ -1,3 +1,4 @@
+import re
 from typing import Optional
 from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type, before_log, after_log
 import json
@@ -55,7 +56,15 @@ def get_groq_completion(messages: list, **kwargs) -> str:
 
 def parse_location_response(result: str) -> Optional[dict]:
     try:
-        return json.loads(result)
+        match = re.search(r'(\{.*\}|".*":.*)', result, re.DOTALL)
+        if match:
+            json_str = match.group(0)
+            if not json_str.startswith("{"):
+                json_str = "{" + json_str + "}"
+            return json.loads(json_str)
+        else:
+            logger.error("No JSON found in the response. The raw response was: %s", result)
+            return None
     except json.JSONDecodeError:
         logger.error("Failed to parse JSON response. The raw response was: %s", result)
         return None
@@ -77,21 +86,22 @@ def extract_location_info(result_json: dict) -> dict:
     before=before_log(logger, logging.INFO),
     after=after_log(logger, logging.INFO),
 )
-def classify_and_extract_location(content: dict) -> Optional[dict]:
+def classify_and_extract_location(article: dict) -> Optional[dict]:
     try:
-        content_json = json.dumps(content, ensure_ascii=False)
+        json_article = json.dumps(article, ensure_ascii=False)
 
-        messages = [{"role": "user", "content": create_prompt(content_json)}]
+        messages = [{"role": "user", "content": create_prompt(json_article)}]
 
         result = get_groq_completion(messages)
         logger.info(f"Raw response from Groq API: {result}")
 
         result_json = parse_location_response(result)
+
         if result_json is None:
             return None
 
         location_data = extract_location_info(result_json)
-        return {**content, **location_data}
+        return {**article, **location_data}
 
     except Exception as e:
         logger.error(f"An unexpected error occurred: {e}")

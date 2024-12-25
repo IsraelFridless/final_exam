@@ -9,42 +9,42 @@ from app.db.es_config import EVENTS_INDEX
 
 
 def clean_data(event: Dict) -> Dict:
-    if 'location' in event:
-        location = event['location']
-        if 'latitude' in location and pd.isna(location['latitude']):
-            location['latitude'] = None
-        if 'longitude' in location and pd.isna(location['longitude']):
-            location['longitude'] = None
+    def clean_location(location: Dict) -> Dict:
+        return {
+            **location,
+            'latitude': None if pd.isna(location.get('latitude')) else location.get('latitude'),
+            'longitude': None if pd.isna(location.get('longitude')) else location.get('longitude')
+        }
 
-    if 'perpetrators' in event and pd.isna(event['perpetrators']):
-        event['perpetrators'] = None
+    def clean_field(field: str, value):
+        return None if field in event and pd.isna(value) else value
 
-    if 'summary' in event and pd.isna(event['summary']):
-        event['summary'] = None
-
-    return event
+    return {
+        **event,
+        'location': clean_location(event['location']) if 'location' in event else event.get('location'),
+        'perpetrators': clean_field('perpetrators', event.get('perpetrators')),
+        'summary': clean_field('summary', event.get('summary'))
+    }
 
 
 def insert_events_batch(events_batch: List[Dict]):
-    if isinstance(events_batch, str):
-        events_batch = json.loads(events_batch)
-
-    actions = []
-    for article in events_batch:
-        article = clean_data(article)
-
-        action = {
+    def prepare_action(article: Dict) -> Dict:
+        return {
             "_op_type": "index",
             "_index": EVENTS_INDEX,
-            "_source": article
+            "_source": clean_data(article),
         }
-        actions.append(action)
+
+    events_batch = json.loads(events_batch) if isinstance(events_batch, str) else events_batch
+
+    actions = list(map(prepare_action, events_batch))
 
     try:
         success, failed = bulk(elastic_client, actions, raise_on_error=False)
         res = {"success": success, "failed": len(failed)}
-        print(f'inserted batch: {res}')
-        if len(failed) > 0:
+        print(f'Inserted batch: {res}')
+
+        if failed:
             print(f"Failed to index {len(failed)} documents.")
             for error in failed:
                 print(f"Failed action: {error}")

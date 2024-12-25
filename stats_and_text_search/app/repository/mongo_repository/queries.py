@@ -383,60 +383,21 @@ def multiple_groups_involved_in_event_pipeline() -> List[Dict]:
         }
     ]
 
-def group_migration_patterns_pipeline() -> List[Dict]:
+def events_by_group_name_pipeline(group_name: str) -> List[Dict]:
     return [
         {
-            "$match": {
-                "location": {"$exists": True},
-                "date": {"$exists": True},
-                "location.region": {"$nin": [None, 'Unknown']},
-                "location.country": {"$nin": [None, 'Unknown']},
-                "location.city": {"$nin": [None, 'Unknown']},
-                "groups_involved": {"$exists": True, "$nin": [None, 'Unknown', []]}
+            '$match': {
+                'location.region': {"$nin": ["", "Unknown", "unknown", None]},
+                'location.country': {"$nin": ["", "Unknown", "unknown", None]},
+                'location.city': {"$nin": ["", "Unknown", "unknown", None]},
+                'location.latitude': {"$ne": None},
+                'location.longitude': { '$ne': None },
+                'groups_involved': { '$ne': None, '$not': { '$size': 0 } },
+                'date.year': { '$ne': None },
+                'date.month': { '$ne': None },
+                'date.day': { '$ne': None }
             }
         },
-        {
-            "$addFields": {
-                "date": {
-                    "$dateFromParts": {
-                        "year": "$date.year",
-                        "month": "$date.month",
-                        "day": "$date.day"
-                    }
-                }
-            }
-        },
-        {
-            "$addFields": {
-                "year": {"$year": "$date"},
-                "month": {"$month": "$date"}
-            }
-        },
-        {
-            "$group": {
-                "_id": {
-                    "region": "$location.region",
-                    "country": "$location.country",
-                    "city": "$location.city",
-                    "group": {"$arrayElemAt": ["$groups_involved", 0]},
-                    "year": "$year",
-                    "month": "$month"
-                },
-                "total_events": {"$sum": 1}
-            }
-        },
-        {
-            "$sort": {"_id.year": 1, "_id.month": 1}
-        },
-        {
-            "$project": {
-                "region": "$_id.region",
-                "country": "$_id.country",
-                "city": "$_id.city",
-                "group": "$_id.group",
-                "year": "$_id.year",
-                "month": "$_id.month",
-                "total_events": 1
-            }
-        }
+        { '$unwind': '$groups_involved' },
+        { '$match': { 'groups_involved': group_name } }
     ]

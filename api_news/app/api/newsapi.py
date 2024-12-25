@@ -1,14 +1,14 @@
 import time
 import requests
 
-from app.service.article_service import process_articles_batch
+from app.service.article_service import process_batch_and_insert_articles
 
 NEWS_API_KEY = '3ff7c545-1d93-4464-bbe3-fbc0c977954c'
 
 def fetch_news_data():
     url = "https://eventregistry.org/api/v1/article/getArticles"
     articles_page = 1
-    articles_count = 1
+    articles_count = 100
     while True:
         try:
             payload = {
@@ -28,7 +28,7 @@ def fetch_news_data():
 
             if response.status_code == 200:
                 data = response.json()
-                process_articles_batch(data['articles']['results'][0])
+                process_batch_and_insert_articles(data['articles']['results'])
                 articles_page += 1
             else:
                 print(f"Request failed with status code {response.status_code}: {response.text}")

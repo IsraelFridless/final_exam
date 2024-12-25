@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9c949b66d4a7996d4d804db217a48410 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9c949b66d4a7996d4d804db217a48410" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9c949b66d4a7996d4d804db217a48410 = L.map(
+                "map_9c949b66d4a7996d4d804db217a48410",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_9a47db97711c72a9df85c821b368e58f = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_9a47db97711c72a9df85c821b368e58f.addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var marker_84202e010d407ad8bf07b7d32eb8f880 = L.marker(
+                [37.0057958, -89.1772449],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_2debf204a6e79a7b0ffc4b62a0d056b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_84202e010d407ad8bf07b7d32eb8f880.setIcon(icon_2debf204a6e79a7b0ffc4b62a0d056b9);
+        
+    
+        var popup_e1ba3547c51f664a2299672c03e35696 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e8e66d5a4c896c78fe368ce735346406 = $(`<div id="html_e8e66d5a4c896c78fe368ce735346406" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Cairo, United States</strong><br>         <i>Incidents:</i> 9<br>         <i>First Incident:</i> 1970-01-01<br>         <i>Last Incident:</i> 1971-05-29<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_e1ba3547c51f664a2299672c03e35696.setContent(html_e8e66d5a4c896c78fe368ce735346406);
+            
+        
+
+        marker_84202e010d407ad8bf07b7d32eb8f880.bindPopup(popup_e1ba3547c51f664a2299672c03e35696)
+        ;
+
+        
+    
+    
+            var marker_6287346a23b030a490355df4d1ab8761 = L.marker(
+                [40.7127281, -74.0060152],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_96f4688bd65c3dd25609cd4afcd73f0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_6287346a23b030a490355df4d1ab8761.setIcon(icon_96f4688bd65c3dd25609cd4afcd73f0f);
+        
+    
+        var popup_f6d3aa8b33082e5526dbe6b1127f8e81 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_031eeabf4077e99710bc515e9981cdfc = $(`<div id="html_031eeabf4077e99710bc515e9981cdfc" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>New York City, United States</strong><br>         <i>Incidents:</i> 9<br>         <i>First Incident:</i> 1970-01-12<br>         <i>Last Incident:</i> 1995-12-08<br>         <i>Fatalities:</i> 8<br>         <i>Injuries:</i> 4     </div>     </div>`)[0];
+                popup_f6d3aa8b33082e5526dbe6b1127f8e81.setContent(html_031eeabf4077e99710bc515e9981cdfc);
+            
+        
+
+        marker_6287346a23b030a490355df4d1ab8761.bindPopup(popup_f6d3aa8b33082e5526dbe6b1127f8e81)
+        ;
+
+        
+    
+    
+            var marker_43b755aaa171cd86dcb41c83e6229f4c = L.marker(
+                [47.6038321, -122.330062],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_e1e2a79d575d1ef9b807bb905c353d1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_43b755aaa171cd86dcb41c83e6229f4c.setIcon(icon_e1e2a79d575d1ef9b807bb905c353d1b);
+        
+    
+        var popup_527edf35565782ff0d50c37252e8b5bb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_382b8fe4bc3c3bca4974b7e58354afe0 = $(`<div id="html_382b8fe4bc3c3bca4974b7e58354afe0" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Seattle, United States</strong><br>         <i>Incidents:</i> 3<br>         <i>First Incident:</i> 1970-01-13<br>         <i>Last Incident:</i> 1970-05-15<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_527edf35565782ff0d50c37252e8b5bb.setContent(html_382b8fe4bc3c3bca4974b7e58354afe0);
+            
+        
+
+        marker_43b755aaa171cd86dcb41c83e6229f4c.bindPopup(popup_527edf35565782ff0d50c37252e8b5bb)
+        ;
+
+        
+    
+    
+            var marker_20ab36b6e7ba1e89a9c666a60f2e0d38 = L.marker(
+                [40.1164841, -88.2430932],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_46647d7f68f9f485a820bb2ed6d6a627 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_20ab36b6e7ba1e89a9c666a60f2e0d38.setIcon(icon_46647d7f68f9f485a820bb2ed6d6a627);
+        
+    
+        var popup_1644eccca3bbed2fbeec6eab66d15eec = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_de501c2b1245b38632abf2b7bc81c390 = $(`<div id="html_de501c2b1245b38632abf2b7bc81c390" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Champaign, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-01-14<br>         <i>Last Incident:</i> 1970-01-14<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_1644eccca3bbed2fbeec6eab66d15eec.setContent(html_de501c2b1245b38632abf2b7bc81c390);
+            
+        
+
+        marker_20ab36b6e7ba1e89a9c666a60f2e0d38.bindPopup(popup_1644eccca3bbed2fbeec6eab66d15eec)
+        ;
+
+        
+    
+    
+            var marker_84c4fec6d095ee802ad8d494f75a5fe9 = L.marker(
+                [41.3927227, -73.95986305044411],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_4ff44b47770dd99613b876d697de3a0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_84c4fec6d095ee802ad8d494f75a5fe9.setIcon(icon_4ff44b47770dd99613b876d697de3a0e);
+        
+    
+        var popup_b52b87d2a3b55f521354d310ccc092a6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7bdc8f17e98b6ad0c3afdcfa3c0a82ef = $(`<div id="html_7bdc8f17e98b6ad0c3afdcfa3c0a82ef" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>West Point, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-01-26<br>         <i>Last Incident:</i> 1970-01-26<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_b52b87d2a3b55f521354d310ccc092a6.setContent(html_7bdc8f17e98b6ad0c3afdcfa3c0a82ef);
+            
+        
+
+        marker_84c4fec6d095ee802ad8d494f75a5fe9.bindPopup(popup_b52b87d2a3b55f521354d310ccc092a6)
+        ;
+
+        
+    
+    
+            var marker_3c4813c24f77ea54225143756b0e59c6 = L.marker(
+                [39.7392364, -104.984862],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_82dd78049c10bee1146fbc14a5d52def = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_3c4813c24f77ea54225143756b0e59c6.setIcon(icon_82dd78049c10bee1146fbc14a5d52def);
+        
+    
+        var popup_a72627385b21295254e6bbbf88cfa686 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6625ba30dfa6e880a92299f934f172ab = $(`<div id="html_6625ba30dfa6e880a92299f934f172ab" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Denver, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-02-06<br>         <i>Last Incident:</i> 1970-02-21<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_a72627385b21295254e6bbbf88cfa686.setContent(html_6625ba30dfa6e880a92299f934f172ab);
+            
+        
+
+        marker_3c4813c24f77ea54225143756b0e59c6.bindPopup(popup_a72627385b21295254e6bbbf88cfa686)
+        ;
+
+        
+    
+    
+            var marker_a7f42d741fbd8f38fb927e6062d9bd45 = L.marker(
+                [37.8708393, -122.272863],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_6ffc782b96c71afcc7c3b2a4e379e148 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a7f42d741fbd8f38fb927e6062d9bd45.setIcon(icon_6ffc782b96c71afcc7c3b2a4e379e148);
+        
+    
+        var popup_93c730b54abec79ddedf2e2316ecde2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a4612f2212b3ac1f94a5dd4ae92dac48 = $(`<div id="html_a4612f2212b3ac1f94a5dd4ae92dac48" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Berkeley, United States</strong><br>         <i>Incidents:</i> 4<br>         <i>First Incident:</i> 1970-02-13<br>         <i>Last Incident:</i> 1970-08-20<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_93c730b54abec79ddedf2e2316ecde2b.setContent(html_a4612f2212b3ac1f94a5dd4ae92dac48);
+            
+        
+
+        marker_a7f42d741fbd8f38fb927e6062d9bd45.bindPopup(popup_93c730b54abec79ddedf2e2316ecde2b)
+        ;
+
+        
+    
+    
+            var marker_d33f1518eb2d499992b5487f987811f7 = L.marker(
+                [41.4996574, -81.6936772],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_cc1bdb9e732cc21fd73a8eb188315095 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_d33f1518eb2d499992b5487f987811f7.setIcon(icon_cc1bdb9e732cc21fd73a8eb188315095);
+        
+    
+        var popup_c193bb23557c913482cb923145b79162 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f596d938a5359e19bfde0b2f76b54054 = $(`<div id="html_f596d938a5359e19bfde0b2f76b54054" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Cleveland, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-02-18<br>         <i>Last Incident:</i> 1970-03-02<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_c193bb23557c913482cb923145b79162.setContent(html_f596d938a5359e19bfde0b2f76b54054);
+            
+        
+
+        marker_d33f1518eb2d499992b5487f987811f7.bindPopup(popup_c193bb23557c913482cb923145b79162)
+        ;
+
+        
+    
+    
+            var marker_f5d447d9e0ee823d1d614a2f3bd205a7 = L.marker(
+                [38.1040864, -122.2566367],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_826cae7eb622a74ab958f5e97ae4038a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_f5d447d9e0ee823d1d614a2f3bd205a7.setIcon(icon_826cae7eb622a74ab958f5e97ae4038a);
+        
+    
+        var popup_07fd432de51e8bd6d3c1c3ab925835b4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e52700278a328e659a14e1a28493f377 = $(`<div id="html_e52700278a328e659a14e1a28493f377" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Vallejo, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-02-18<br>         <i>Last Incident:</i> 1970-02-18<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_07fd432de51e8bd6d3c1c3ab925835b4.setContent(html_e52700278a328e659a14e1a28493f377);
+            
+        
+
+        marker_f5d447d9e0ee823d1d614a2f3bd205a7.bindPopup(popup_07fd432de51e8bd6d3c1c3ab925835b4)
+        ;
+
+        
+    
+    
+            var marker_731ad5f6786cda8f78423f500ac6a213 = L.marker(
+                [34.0827278, -118.4479802],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_a736eec7124dad36f70849b96f560bee = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_731ad5f6786cda8f78423f500ac6a213.setIcon(icon_a736eec7124dad36f70849b96f560bee);
+        
+    
+        var popup_b8cc316cef10e49ff31faf718904f6a7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f55778595a9490b638df9007bfd1fabc = $(`<div id="html_f55778595a9490b638df9007bfd1fabc" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Bel Air, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-03-09<br>         <i>Last Incident:</i> 1970-03-09<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_b8cc316cef10e49ff31faf718904f6a7.setContent(html_f55778595a9490b638df9007bfd1fabc);
+            
+        
+
+        marker_731ad5f6786cda8f78423f500ac6a213.bindPopup(popup_b8cc316cef10e49ff31faf718904f6a7)
+        ;
+
+        
+    
+    
+            var marker_474fff6ff8be2ab5420be85f5e0fec4e = L.marker(
+                [41.8755616, -87.6244212],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_41aaa8d441773120ae0325b67e4d933a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_474fff6ff8be2ab5420be85f5e0fec4e.setIcon(icon_41aaa8d441773120ae0325b67e4d933a);
+        
+    
+        var popup_9d4617e2934700ef3a7f754f75a25282 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7a700ce9ca746d2f725aaa659691846d = $(`<div id="html_7a700ce9ca746d2f725aaa659691846d" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Chicago, United States</strong><br>         <i>Incidents:</i> 4<br>         <i>First Incident:</i> 1970-03-12<br>         <i>Last Incident:</i> 1970-07-17<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_9d4617e2934700ef3a7f754f75a25282.setContent(html_7a700ce9ca746d2f725aaa659691846d);
+            
+        
+
+        marker_474fff6ff8be2ab5420be85f5e0fec4e.bindPopup(popup_9d4617e2934700ef3a7f754f75a25282)
+        ;
+
+        
+    
+    
+            var marker_77b173c98c7db506910daefcf0f3a902 = L.marker(
+                [37.5385087, -77.43428],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_030d3daf43d8bfb93f09b70f64360c10 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_77b173c98c7db506910daefcf0f3a902.setIcon(icon_030d3daf43d8bfb93f09b70f64360c10);
+        
+    
+        var popup_eea38457db9c050de965c94224268eef = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d63f6202ccd89e8db5a3c1e62e4b574 = $(`<div id="html_9d63f6202ccd89e8db5a3c1e62e4b574" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Richmond, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-03-24<br>         <i>Last Incident:</i> 1970-03-24<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_eea38457db9c050de965c94224268eef.setContent(html_9d63f6202ccd89e8db5a3c1e62e4b574);
+            
+        
+
+        marker_77b173c98c7db506910daefcf0f3a902.bindPopup(popup_eea38457db9c050de965c94224268eef)
+        ;
+
+        
+    
+    
+            var marker_e32e8eb75acff0eef214e61c381d0b6d = L.marker(
+                [37.7792588, -122.4193286],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_2372182ecee8b866be1fd18a64b87ead = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e32e8eb75acff0eef214e61c381d0b6d.setIcon(icon_2372182ecee8b866be1fd18a64b87ead);
+        
+    
+        var popup_be6b5b2c56a454cdb6da235f81aa8e13 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26cd86029c11d9743037c261a0d70d5e = $(`<div id="html_26cd86029c11d9743037c261a0d70d5e" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>San Francisco, United States</strong><br>         <i>Incidents:</i> 4<br>         <i>First Incident:</i> 1970-03-27<br>         <i>Last Incident:</i> 1971-01-19<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_be6b5b2c56a454cdb6da235f81aa8e13.setContent(html_26cd86029c11d9743037c261a0d70d5e);
+            
+        
+
+        marker_e32e8eb75acff0eef214e61c381d0b6d.bindPopup(popup_be6b5b2c56a454cdb6da235f81aa8e13)
+        ;
+
+        
+    
+    
+            var marker_8591c36b53b1e6c6ad300847b1793acc = L.marker(
+                [30.4494155, -91.1869659],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_149bf4ea0a9f7c55bfc4b62d28e4d19e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8591c36b53b1e6c6ad300847b1793acc.setIcon(icon_149bf4ea0a9f7c55bfc4b62d28e4d19e);
+        
+    
+        var popup_e3975064ff5462dcc9ecc015f3a7cad4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6cdf8dd8152a5a4e73e1651c60e0544 = $(`<div id="html_a6cdf8dd8152a5a4e73e1651c60e0544" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Baton Rouge, United States</strong><br>         <i>Incidents:</i> 3<br>         <i>First Incident:</i> 1970-04-26<br>         <i>Last Incident:</i> 1970-04-30<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_e3975064ff5462dcc9ecc015f3a7cad4.setContent(html_a6cdf8dd8152a5a4e73e1651c60e0544);
+            
+        
+
+        marker_8591c36b53b1e6c6ad300847b1793acc.bindPopup(popup_e3975064ff5462dcc9ecc015f3a7cad4)
+        ;
+
+        
+    
+    
+            var marker_819a9aa392ed35845652354ad1063543 = L.marker(
+                [41.6612561, -91.5299106],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_8cdd01eecb15efe0e815e6c018a8d788 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_819a9aa392ed35845652354ad1063543.setIcon(icon_8cdd01eecb15efe0e815e6c018a8d788);
+        
+    
+        var popup_b87b9a0a3f19c6da27f049b1acd3151b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ec86dea0aedd1ccddbd78278d2254567 = $(`<div id="html_ec86dea0aedd1ccddbd78278d2254567" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Iowa City, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-04-27<br>         <i>Last Incident:</i> 1970-04-27<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_b87b9a0a3f19c6da27f049b1acd3151b.setContent(html_ec86dea0aedd1ccddbd78278d2254567);
+            
+        
+
+        marker_819a9aa392ed35845652354ad1063543.bindPopup(popup_b87b9a0a3f19c6da27f049b1acd3151b)
+        ;
+
+        
+    
+    
+            var marker_0be52ecfa4434883838277e9b9d82ccf = L.marker(
+                [42.3554334, -71.060511],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_8476c70eddb7038605c34eb5f60513a6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_0be52ecfa4434883838277e9b9d82ccf.setIcon(icon_8476c70eddb7038605c34eb5f60513a6);
+        
+    
+        var popup_04dc73f08e3f87c3acef23752f3d9ba2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5b126651af07389214b0414af6655ba2 = $(`<div id="html_5b126651af07389214b0414af6655ba2" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Boston, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-05-06<br>         <i>Last Incident:</i> 1970-05-27<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_04dc73f08e3f87c3acef23752f3d9ba2.setContent(html_5b126651af07389214b0414af6655ba2);
+            
+        
+
+        marker_0be52ecfa4434883838277e9b9d82ccf.bindPopup(popup_04dc73f08e3f87c3acef23752f3d9ba2)
+        ;
+
+        
+    
+    
+            var marker_8c8468b8da7f473941a1273b6b24b8ad = L.marker(
+                [38.5810606, -121.493895],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_a5931fea38a70ad0e78a629a455ca947 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8c8468b8da7f473941a1273b6b24b8ad.setIcon(icon_a5931fea38a70ad0e78a629a455ca947);
+        
+    
+        var popup_c49c0b4172bcb4b2559b2d67c499a573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_135a4cc1f95348da8740fcf9cdcdeeac = $(`<div id="html_135a4cc1f95348da8740fcf9cdcdeeac" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Sacramento, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-05-09<br>         <i>Last Incident:</i> 1970-05-09<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_c49c0b4172bcb4b2559b2d67c499a573.setContent(html_135a4cc1f95348da8740fcf9cdcdeeac);
+            
+        
+
+        marker_8c8468b8da7f473941a1273b6b24b8ad.bindPopup(popup_c49c0b4172bcb4b2559b2d67c499a573)
+        ;
+
+        
+    
+    
+            var marker_71b6d49858d93831005e0b469262a8b3 = L.marker(
+                [34.3663773, -89.5187664],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_3b94773a7a39711343137eaad680e0a3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_71b6d49858d93831005e0b469262a8b3.setIcon(icon_3b94773a7a39711343137eaad680e0a3);
+        
+    
+        var popup_1d2b221402e1f91d8bdeb0a5c0c2bfa6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_865a9272f110cc4f1cac7553d5fec814 = $(`<div id="html_865a9272f110cc4f1cac7553d5fec814" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Oxford, United States</strong><br>         <i>Incidents:</i> 4<br>         <i>First Incident:</i> 1970-05-13<br>         <i>Last Incident:</i> 1970-05-26<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_1d2b221402e1f91d8bdeb0a5c0c2bfa6.setContent(html_865a9272f110cc4f1cac7553d5fec814);
+            
+        
+
+        marker_71b6d49858d93831005e0b469262a8b3.bindPopup(popup_1d2b221402e1f91d8bdeb0a5c0c2bfa6)
+        ;
+
+        
+    
+    
+            var marker_8226a625ddb24ee280a252d8049e985b = L.marker(
+                [44.9497487, -93.0931028],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_dfff786b963d9a63a9128078c2afd38f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_8226a625ddb24ee280a252d8049e985b.setIcon(icon_dfff786b963d9a63a9128078c2afd38f);
+        
+    
+        var popup_cb4912ff132c626e7292d98351c80a2b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_641d50f46ec69ef93af78316d54f6ecb = $(`<div id="html_641d50f46ec69ef93af78316d54f6ecb" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>St. Paul, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-05-22<br>         <i>Last Incident:</i> 1970-05-22<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_cb4912ff132c626e7292d98351c80a2b.setContent(html_641d50f46ec69ef93af78316d54f6ecb);
+            
+        
+
+        marker_8226a625ddb24ee280a252d8049e985b.bindPopup(popup_cb4912ff132c626e7292d98351c80a2b)
+        ;
+
+        
+    
+    
+            var marker_1ad6111eac36ef922d349dd8de2e5bca = L.marker(
+                [37.8044557, -122.271356],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_f5922a1d948068a63046bdddc431774e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_1ad6111eac36ef922d349dd8de2e5bca.setIcon(icon_f5922a1d948068a63046bdddc431774e);
+        
+    
+        var popup_cb354fd2d073d494d0714bc2dbde596b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9b4670feabc64743ff5aa8e68835465a = $(`<div id="html_9b4670feabc64743ff5aa8e68835465a" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Oakland, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-05-29<br>         <i>Last Incident:</i> 1970-06-04<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_cb354fd2d073d494d0714bc2dbde596b.setContent(html_9b4670feabc64743ff5aa8e68835465a);
+            
+        
+
+        marker_1ad6111eac36ef922d349dd8de2e5bca.bindPopup(popup_cb354fd2d073d494d0714bc2dbde596b)
+        ;
+
+        
+    
+    
+            var marker_96341c0cb73573e2e0bdae42dd435e06 = L.marker(
+                [34.0536909, -118.242766],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_2b4dac8c3edbc6b6771bc77441a8323d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_96341c0cb73573e2e0bdae42dd435e06.setIcon(icon_2b4dac8c3edbc6b6771bc77441a8323d);
+        
+    
+        var popup_4c32d5452b0b6c2324665ccbe20997a8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3684cf313af9c37a920388cb61fce35c = $(`<div id="html_3684cf313af9c37a920388cb61fce35c" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Los Angeles, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-06-07<br>         <i>Last Incident:</i> 1970-06-07<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_4c32d5452b0b6c2324665ccbe20997a8.setContent(html_3684cf313af9c37a920388cb61fce35c);
+            
+        
+
+        marker_96341c0cb73573e2e0bdae42dd435e06.bindPopup(popup_4c32d5452b0b6c2324665ccbe20997a8)
+        ;
+
+        
+    
+    
+            var marker_0212b15a893dbe4b127d622a072563fe = L.marker(
+                [40.735657, -74.1723667],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_dc36205836938b6e9ce852fff59daf2b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_0212b15a893dbe4b127d622a072563fe.setIcon(icon_dc36205836938b6e9ce852fff59daf2b);
+        
+    
+        var popup_258fc5497a93ed98cf6901c31649421f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7ad78e57e360dd6c8bb47cd7f8fc62a6 = $(`<div id="html_7ad78e57e360dd6c8bb47cd7f8fc62a6" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Newark, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-06-09<br>         <i>Last Incident:</i> 1970-06-09<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_258fc5497a93ed98cf6901c31649421f.setContent(html_7ad78e57e360dd6c8bb47cd7f8fc62a6);
+            
+        
+
+        marker_0212b15a893dbe4b127d622a072563fe.bindPopup(popup_258fc5497a93ed98cf6901c31649421f)
+        ;
+
+        
+    
+    
+            var marker_cad4df64edc7f7cf708cf8c4a669b5bd = L.marker(
+                [39.100105, -94.5781416],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_555ddc558dcd38de70ef070b9d424eba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cad4df64edc7f7cf708cf8c4a669b5bd.setIcon(icon_555ddc558dcd38de70ef070b9d424eba);
+        
+    
+        var popup_e67a675d6fa3b915adbd05d535c92fe6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4fbe9a13d27633685a82b649e89ef8fc = $(`<div id="html_4fbe9a13d27633685a82b649e89ef8fc" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Kansas City, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-06-13<br>         <i>Last Incident:</i> 1970-10-15<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_e67a675d6fa3b915adbd05d535c92fe6.setContent(html_4fbe9a13d27633685a82b649e89ef8fc);
+            
+        
+
+        marker_cad4df64edc7f7cf708cf8c4a669b5bd.bindPopup(popup_e67a675d6fa3b915adbd05d535c92fe6)
+        ;
+
+        
+    
+    
+            var marker_303d8d81830a647d6ec4e72e070c1f61 = L.marker(
+                [33.8897798, -118.3935254],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_060a74e71e6ed3572026daffef248353 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_303d8d81830a647d6ec4e72e070c1f61.setIcon(icon_060a74e71e6ed3572026daffef248353);
+        
+    
+        var popup_57c1f33f482e2b065a80fa485519af88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d807d0a59bcc717abfcc7ee8ab502a81 = $(`<div id="html_d807d0a59bcc717abfcc7ee8ab502a81" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Manhattan Beach, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-06-15<br>         <i>Last Incident:</i> 1970-06-15<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_57c1f33f482e2b065a80fa485519af88.setContent(html_d807d0a59bcc717abfcc7ee8ab502a81);
+            
+        
+
+        marker_303d8d81830a647d6ec4e72e070c1f61.bindPopup(popup_57c1f33f482e2b065a80fa485519af88)
+        ;
+
+        
+    
+    
+            var marker_c26a5c777978ff58e2752a12b0bf4e55 = L.marker(
+                [37.8314089, -122.2865266],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_ffed2aa26cf7a20640dbdd1d860cdc97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_c26a5c777978ff58e2752a12b0bf4e55.setIcon(icon_ffed2aa26cf7a20640dbdd1d860cdc97);
+        
+    
+        var popup_d83161263be7d8c8df763bd893d6782c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_571ec7fdde7b92275936e82bddefc491 = $(`<div id="html_571ec7fdde7b92275936e82bddefc491" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Emeryville, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-06-17<br>         <i>Last Incident:</i> 1970-06-17<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_d83161263be7d8c8df763bd893d6782c.setContent(html_571ec7fdde7b92275936e82bddefc491);
+            
+        
+
+        marker_c26a5c777978ff58e2752a12b0bf4e55.bindPopup(popup_d83161263be7d8c8df763bd893d6782c)
+        ;
+
+        
+    
+    
+            var marker_5f15a91c437330ebe14d0334e86f6297 = L.marker(
+                [41.6086711, -88.2054345],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_189ab02dfcb57a8c4e43b97ca956d329 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_5f15a91c437330ebe14d0334e86f6297.setIcon(icon_189ab02dfcb57a8c4e43b97ca956d329);
+        
+    
+        var popup_792def8331d64416e8f2e263f454dfd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33bced29a14a040a905e9d0bb581fb17 = $(`<div id="html_33bced29a14a040a905e9d0bb581fb17" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Plainfield, United States</strong><br>         <i>Incidents:</i> 2<br>         <i>First Incident:</i> 1970-06-30<br>         <i>Last Incident:</i> 1971-09-18<br>         <i>Fatalities:</i> 1<br>         <i>Injuries:</i> 1     </div>     </div>`)[0];
+                popup_792def8331d64416e8f2e263f454dfd5.setContent(html_33bced29a14a040a905e9d0bb581fb17);
+            
+        
+
+        marker_5f15a91c437330ebe14d0334e86f6297.bindPopup(popup_792def8331d64416e8f2e263f454dfd5)
+        ;
+
+        
+    
+    
+            var marker_e1b50dc15f1aac0e96d7f2103faf05a2 = L.marker(
+                [33.894927, -118.226624],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_53ffc0190dff7453ed9c9c77d85c009f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e1b50dc15f1aac0e96d7f2103faf05a2.setIcon(icon_53ffc0190dff7453ed9c9c77d85c009f);
+        
+    
+        var popup_ef9ea387b0c64d71e3cc8e581beac0f3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_04aab93f85c91d4ccd61ab69ae181bc3 = $(`<div id="html_04aab93f85c91d4ccd61ab69ae181bc3" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Compton, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-07-02<br>         <i>Last Incident:</i> 1970-07-02<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_ef9ea387b0c64d71e3cc8e581beac0f3.setContent(html_04aab93f85c91d4ccd61ab69ae181bc3);
+            
+        
+
+        marker_e1b50dc15f1aac0e96d7f2103faf05a2.bindPopup(popup_ef9ea387b0c64d71e3cc8e581beac0f3)
+        ;
+
+        
+    
+    
+            var marker_cc4f899fc2e4961452b8a8d5ee25015e = L.marker(
+                [37.3361663, -121.890591],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_e932a330ea017503523f077638af3264 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cc4f899fc2e4961452b8a8d5ee25015e.setIcon(icon_e932a330ea017503523f077638af3264);
+        
+    
+        var popup_f3d10120ab36a01da7ffa9f2a487b164 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_318b2b75ddab3e8a3c04d89dcad4c12e = $(`<div id="html_318b2b75ddab3e8a3c04d89dcad4c12e" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>San Jose, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-08-06<br>         <i>Last Incident:</i> 1970-08-06<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_f3d10120ab36a01da7ffa9f2a487b164.setContent(html_318b2b75ddab3e8a3c04d89dcad4c12e);
+            
+        
+
+        marker_cc4f899fc2e4961452b8a8d5ee25015e.bindPopup(popup_f3d10120ab36a01da7ffa9f2a487b164)
+        ;
+
+        
+    
+    
+            var marker_69eb3ca2761930ba056fa30b99261ae9 = L.marker(
+                [29.0931328, -97.3158457],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_7f2a9bf976c1522f55687dd7763d0f48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_69eb3ca2761930ba056fa30b99261ae9.setIcon(icon_7f2a9bf976c1522f55687dd7763d0f48);
+        
+    
+        var popup_01fabfacc05a579a427844f5b796145d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a7b317e04319c7f0503159834305e2f0 = $(`<div id="html_a7b317e04319c7f0503159834305e2f0" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>DeWitt, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-09-05<br>         <i>Last Incident:</i> 1970-09-05<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_01fabfacc05a579a427844f5b796145d.setContent(html_a7b317e04319c7f0503159834305e2f0);
+            
+        
+
+        marker_69eb3ca2761930ba056fa30b99261ae9.bindPopup(popup_01fabfacc05a579a427844f5b796145d)
+        ;
+
+        
+    
+    
+            var marker_ec044b3df95e48f323a48906cbfd4991 = L.marker(
+                [27.7700475, -82.6359078],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_4fae00c6e923a722ae8caf28130167df = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_ec044b3df95e48f323a48906cbfd4991.setIcon(icon_4fae00c6e923a722ae8caf28130167df);
+        
+    
+        var popup_dd70676ebac1e37d05186cefab67d9de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_36d238ebd4273a568244e536e670f4df = $(`<div id="html_36d238ebd4273a568244e536e670f4df" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>St. Petersburg, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1970-11-15<br>         <i>Last Incident:</i> 1970-11-15<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_dd70676ebac1e37d05186cefab67d9de.setContent(html_36d238ebd4273a568244e536e670f4df);
+            
+        
+
+        marker_ec044b3df95e48f323a48906cbfd4991.bindPopup(popup_dd70676ebac1e37d05186cefab67d9de)
+        ;
+
+        
+    
+    
+            var marker_d8c64db5f3057799ea30ea43514b024d = L.marker(
+                [34.0553813, -117.7517496],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_20878b36a7978381d662be5dccb90dc4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_d8c64db5f3057799ea30ea43514b024d.setIcon(icon_20878b36a7978381d662be5dccb90dc4);
+        
+    
+        var popup_aae92d202cf8bcd6d202196efb6f4a5e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2fd06144accf1b8676a041f7078a7482 = $(`<div id="html_2fd06144accf1b8676a041f7078a7482" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Pomona, United States</strong><br>         <i>Incidents:</i> 3<br>         <i>First Incident:</i> 1971-01-06<br>         <i>Last Incident:</i> 1971-01-11<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_aae92d202cf8bcd6d202196efb6f4a5e.setContent(html_2fd06144accf1b8676a041f7078a7482);
+            
+        
+
+        marker_d8c64db5f3057799ea30ea43514b024d.bindPopup(popup_aae92d202cf8bcd6d202196efb6f4a5e)
+        ;
+
+        
+    
+    
+            var marker_37ed335ea1c9cd5dd1dbe9c387f23bd7 = L.marker(
+                [26.715364, -80.0532942],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_2fff07e577072ad1ac749eb9797d650a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_37ed335ea1c9cd5dd1dbe9c387f23bd7.setIcon(icon_2fff07e577072ad1ac749eb9797d650a);
+        
+    
+        var popup_ff7e619ace310327beeeabac99ca40a0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5248853ec989d01d741afad1b835ab03 = $(`<div id="html_5248853ec989d01d741afad1b835ab03" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>West Palm Beach, United States</strong><br>         <i>Incidents:</i> 3<br>         <i>First Incident:</i> 1971-01-26<br>         <i>Last Incident:</i> 1971-05-12<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_ff7e619ace310327beeeabac99ca40a0.setContent(html_5248853ec989d01d741afad1b835ab03);
+            
+        
+
+        marker_37ed335ea1c9cd5dd1dbe9c387f23bd7.bindPopup(popup_ff7e619ace310327beeeabac99ca40a0)
+        ;
+
+        
+    
+    
+            var marker_04c94f015c4e2489edaa140d8906ea63 = L.marker(
+                [33.9824949, -117.374238],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_28eb89a07bbd3f10d099569754d046c4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_04c94f015c4e2489edaa140d8906ea63.setIcon(icon_28eb89a07bbd3f10d099569754d046c4);
+        
+    
+        var popup_5abadb43f81333733a5ae3a67235d5cb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_28f886596d85d07cf26ff0b2075f1af5 = $(`<div id="html_28f886596d85d07cf26ff0b2075f1af5" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Riverside, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1971-04-02<br>         <i>Last Incident:</i> 1971-04-02<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_5abadb43f81333733a5ae3a67235d5cb.setContent(html_28f886596d85d07cf26ff0b2075f1af5);
+            
+        
+
+        marker_04c94f015c4e2489edaa140d8906ea63.bindPopup(popup_5abadb43f81333733a5ae3a67235d5cb)
+        ;
+
+        
+    
+    
+            var marker_e519e2d2a80993b0e12b1113d76658ea = L.marker(
+                [41.7690519, -87.7770096],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_51e3c640bf1fbc9fe2b3400d4f8855fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_e519e2d2a80993b0e12b1113d76658ea.setIcon(icon_51e3c640bf1fbc9fe2b3400d4f8855fb);
+        
+    
+        var popup_8166d403f6646c19912d7647ffedde75 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_894294df8618147639d43f8d54b78ea3 = $(`<div id="html_894294df8618147639d43f8d54b78ea3" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Bedford Park, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1971-05-28<br>         <i>Last Incident:</i> 1971-05-28<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_8166d403f6646c19912d7647ffedde75.setContent(html_894294df8618147639d43f8d54b78ea3);
+            
+        
+
+        marker_e519e2d2a80993b0e12b1113d76658ea.bindPopup(popup_8166d403f6646c19912d7647ffedde75)
+        ;
+
+        
+    
+    
+            var marker_389d856a375b169b33b0eba10bb05417 = L.marker(
+                [37.496904, -122.3330573],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_232fcd28e1877b1b109c234f74f1abb9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_389d856a375b169b33b0eba10bb05417.setIcon(icon_232fcd28e1877b1b109c234f74f1abb9);
+        
+    
+        var popup_e21930250343ffdc609c98d12502d647 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8709ac1fe83c47e39036d4a88f1fa223 = $(`<div id="html_8709ac1fe83c47e39036d4a88f1fa223" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>San Mateo, United States</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1971-08-28<br>         <i>Last Incident:</i> 1971-08-28<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_e21930250343ffdc609c98d12502d647.setContent(html_8709ac1fe83c47e39036d4a88f1fa223);
+            
+        
+
+        marker_389d856a375b169b33b0eba10bb05417.bindPopup(popup_e21930250343ffdc609c98d12502d647)
+        ;
+
+        
+    
+    
+            var marker_2c843760931c8d5adbb45fe9d591038a = L.marker(
+                [-29.861825, 31.009909],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_3bf063a1e86a3ec2f825448c8b8d4737 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_2c843760931c8d5adbb45fe9d591038a.setIcon(icon_3bf063a1e86a3ec2f825448c8b8d4737);
+        
+    
+        var popup_7f741769713cad697bc0472386649039 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78922cb68cf502e9f17047cec581f26f = $(`<div id="html_78922cb68cf502e9f17047cec581f26f" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Durban, South Africa</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1983-07-07<br>         <i>Last Incident:</i> 1983-07-07<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_7f741769713cad697bc0472386649039.setContent(html_78922cb68cf502e9f17047cec581f26f);
+            
+        
+
+        marker_2c843760931c8d5adbb45fe9d591038a.bindPopup(popup_7f741769713cad697bc0472386649039)
+        ;
+
+        
+    
+    
+            var marker_cc8e99c9491384525cc55743381daaef = L.marker(
+                [-26.205, 28.049722],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_ed933060f36ab5cbafca9a0b1dbd3663 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_cc8e99c9491384525cc55743381daaef.setIcon(icon_ed933060f36ab5cbafca9a0b1dbd3663);
+        
+    
+        var popup_2c4fcc7c7ef0a8d2e3fc6e8989b0a5a2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_73c190b1d5a6d8c6e13dfc0d2232be01 = $(`<div id="html_73c190b1d5a6d8c6e13dfc0d2232be01" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Johannesburg, South Africa</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1984-05-18<br>         <i>Last Incident:</i> 1984-05-18<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_2c4fcc7c7ef0a8d2e3fc6e8989b0a5a2.setContent(html_73c190b1d5a6d8c6e13dfc0d2232be01);
+            
+        
+
+        marker_cc8e99c9491384525cc55743381daaef.bindPopup(popup_2c4fcc7c7ef0a8d2e3fc6e8989b0a5a2)
+        ;
+
+        
+    
+    
+            var marker_38584b4c924200cae1d019d5c83d8ec1 = L.marker(
+                [-22.3453519, 30.0268526],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_ff21569af00822a8c001d1379d093666 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_38584b4c924200cae1d019d5c83d8ec1.setIcon(icon_ff21569af00822a8c001d1379d093666);
+        
+    
+        var popup_eda0417651fa3f504fc934ff3734c238 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_151ab895506886a806524d3eafc314af = $(`<div id="html_151ab895506886a806524d3eafc314af" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Messina, South Africa</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1985-12-12<br>         <i>Last Incident:</i> 1985-12-12<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_eda0417651fa3f504fc934ff3734c238.setContent(html_151ab895506886a806524d3eafc314af);
+            
+        
+
+        marker_38584b4c924200cae1d019d5c83d8ec1.bindPopup(popup_eda0417651fa3f504fc934ff3734c238)
+        ;
+
+        
+    
+    
+            var poly_line_3d05b327fccbdcb7d173435287d313b1 = L.polyline(
+                [[37.0057958, -89.1772449], [40.7127281, -74.0060152], [47.6038321, -122.330062], [40.1164841, -88.2430932], [41.3927227, -73.95986305044411], [39.7392364, -104.984862], [37.8708393, -122.272863], [41.4996574, -81.6936772], [38.1040864, -122.2566367], [34.0827278, -118.4479802], [41.8755616, -87.6244212], [37.5385087, -77.43428], [37.7792588, -122.4193286], [30.4494155, -91.1869659], [41.6612561, -91.5299106], [42.3554334, -71.060511], [38.5810606, -121.493895], [34.3663773, -89.5187664], [44.9497487, -93.0931028], [37.8044557, -122.271356], [34.0536909, -118.242766], [40.735657, -74.1723667], [39.100105, -94.5781416], [33.8897798, -118.3935254], [37.8314089, -122.2865266], [41.6086711, -88.2054345], [33.894927, -118.226624], [37.3361663, -121.890591], [29.0931328, -97.3158457], [27.7700475, -82.6359078], [34.0553813, -117.7517496], [26.715364, -80.0532942], [33.9824949, -117.374238], [41.7690519, -87.7770096], [37.496904, -122.3330573], [-29.861825, 31.009909], [-26.205, 28.049722], [-22.3453519, 30.0268526]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.7, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var marker_26ca9d56637f972476409cf5da559f4d = L.marker(
+                [37.0057958, -89.1772449],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_25791d7912d4c39dd45b4e62c29e093c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "arrow-up",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_26ca9d56637f972476409cf5da559f4d.setIcon(icon_25791d7912d4c39dd45b4e62c29e093c);
+        
+    
+        var popup_09b873b559dd73e5d754dbff6e556a2e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b5f2d7edf864145e65c9c632eda89b2a = $(`<div id="html_b5f2d7edf864145e65c9c632eda89b2a" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Cairo, United States</strong><br>         <i>Incidents:</i> 9<br>         <i>First Incident:</i> 1970-01-01<br>         <i>Last Incident:</i> 1971-05-29<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_09b873b559dd73e5d754dbff6e556a2e.setContent(html_b5f2d7edf864145e65c9c632eda89b2a);
+            
+        
+
+        marker_26ca9d56637f972476409cf5da559f4d.bindPopup(popup_09b873b559dd73e5d754dbff6e556a2e)
+        ;
+
+        
+    
+    
+            var marker_a320e96c91ea029f204d2859cdf448a8 = L.marker(
+                [-22.3453519, 30.0268526],
+                {
+}
+            ).addTo(map_9c949b66d4a7996d4d804db217a48410);
+        
+    
+            var icon_3299543cfe71884d3f2f9eadba9e9a8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "arrow-down",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+            marker_a320e96c91ea029f204d2859cdf448a8.setIcon(icon_3299543cfe71884d3f2f9eadba9e9a8c);
+        
+    
+        var popup_40e47a159a39ff076802f44ffda07b46 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c66e0b0692b70c41dac0c8c41478d318 = $(`<div id="html_c66e0b0692b70c41dac0c8c41478d318" style="width: 100.0%; height: 100.0%;">     <div style="max-height: 150px; overflow-y: scroll; width: 200px;">         <strong>Messina, South Africa</strong><br>         <i>Incidents:</i> 1<br>         <i>First Incident:</i> 1985-12-12<br>         <i>Last Incident:</i> 1985-12-12<br>         <i>Fatalities:</i> 0<br>         <i>Injuries:</i> 0     </div>     </div>`)[0];
+                popup_40e47a159a39ff076802f44ffda07b46.setContent(html_c66e0b0692b70c41dac0c8c41478d318);
+            
+        
+
+        marker_a320e96c91ea029f204d2859cdf448a8.bindPopup(popup_40e47a159a39ff076802f44ffda07b46)
+        ;
+
+        
+    
+</script>
+</html>
