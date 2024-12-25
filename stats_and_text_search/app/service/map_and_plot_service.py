@@ -1,5 +1,4 @@
 import io
-from collections import defaultdict
 
 import folium
 import pandas as pd
@@ -253,41 +252,7 @@ def plot_casualties_by_group(results: List[Dict]):
     plt.close()
     return buffer
 
-# def prepare_migration_data(migration_data):
-#     data = defaultdict(lambda: defaultdict(int))
-#
-#     for group_data in migration_data:
-#         group = group_data['group']
-#         for region_country in group_data['regions_countries']:
-#             region = region_country['region']
-#             country = region_country['country']
-#             years = region_country['years']
-#
-#             for year in years:
-#                 data[group][(region, country, year)] += 1
-#
-#     final_data = defaultdict(list)
-#
-#     for group, migrations in data.items():
-#         years = sorted(set(year for _, _, year in migrations))
-#         for year in years:
-#             year_data = {f"{region} - {country}": migrations.get((region, country, year), 0)
-#                          for region, country, _ in migrations}
-#             final_data['year'].append(year)
-#             final_data['group'].append(group)
-#             final_data.update(year_data)
-#
-#     return pd.DataFrame(final_data)
-
 def plot_migration_patterns(results: List[Dict]) -> folium.Map:
-    """
-    Handles the results from MongoDB aggregation and generates a migration pattern map
-    as an image in memory.
-
-    :param results: Aggregated MongoDB query results
-    :return: A BytesIO buffer containing the PNG image of the map.
-    """
-    # Prepare the data into a DataFrame
     data = []
     for event in results:
         data.append({
@@ -298,24 +263,21 @@ def plot_migration_patterns(results: List[Dict]) -> folium.Map:
             'year': event['year'],
             'month': event['month'],
             'total_events': event['total_events'],
-            'latitude': event.get('latitude'),  # Make sure latitude and longitude are present
+            'latitude': event.get('latitude'),
             'longitude': event.get('longitude')
         })
 
     df = pd.DataFrame(data)
 
-    # Drop any rows with missing latitude/longitude
     df = df.dropna(subset=['latitude', 'longitude'])
 
-    # Create a Folium map
     map_center = [df['latitude'].mean(), df['longitude'].mean()]
     m = folium.Map(location=map_center, zoom_start=5)
 
-    # Add markers for each event
     for _, row in df.iterrows():
         folium.CircleMarker(
             location=[row['latitude'], row['longitude']],
-            radius=row['total_events'] / 2,  # Adjust size based on total events
+            radius=row['total_events'] / 2,
             color='blue',
             fill=True,
             fill_color='blue',
